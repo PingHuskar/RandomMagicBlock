@@ -1,0 +1,152 @@
+$backgound: #333;
+$color: #aaa;
+$blockColors: blue,red,yellow,green,orange,white;
+$borderColor: black;
+$showInnerBorder: true;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: $backgound;
+    color: $color;
+    font-family: sans-serif;
+}
+
+h1 {
+    user-select: none;
+    padding-bottom: 10px;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 500px;
+    height: 500px;
+    div {
+        display: flex;
+        flex-flow: row;
+        width: 500px;
+        height: 100px;
+        @each $blockColor in $blockColors {
+            .#{$blockColor} {
+                width: 100px;
+                height: 100px;
+                background: $blockColor;
+            }
+          }
+        .blank {
+            width: 100px;
+            height: 100px;
+            background: $backgound;
+        }
+    }
+    div:first-child,div:last-child {
+        div {
+            background: $backgound;
+        }
+    }
+
+    div:nth-child(2) {
+        div:first-child,div:last-child {
+            background: $backgound;
+        }
+        div:nth-child(2) {
+            @if $showInnerBorder {
+                border: 5px solid $borderColor;
+            } @else {
+                border-top: 5px solid $borderColor;
+                border-left: 5px solid $borderColor;
+            }
+        }
+        div:nth-child(3) {
+            @if $showInnerBorder {
+                border: 5px solid $borderColor;
+                border-left: none;
+                border-right: none;
+            } @else {
+                border-top: 5px solid $borderColor;
+            }
+        }
+        div:nth-child(4) {
+            @if $showInnerBorder {
+                border: 5px solid $borderColor;
+            } @else {
+                border-top: 5px solid $borderColor;
+                border-right: 5px solid $borderColor;
+            }
+        }
+    }
+    div:nth-child(3) {
+        div:first-child,div:last-child {
+            background: $backgound;
+        }
+        div:nth-child(2) {
+            @if $showInnerBorder {
+                border: 5px solid $borderColor;
+                border-top: none;
+                border-bottom: none;
+            } @else {
+                border-left: 5px solid $borderColor;
+            }
+        }
+        div:nth-child(4) {
+            @if $showInnerBorder {
+                border: 5px solid $borderColor;
+                border-top: none;
+                border-bottom: none;
+            } @else {
+                border-right: 5px solid $borderColor;
+            }
+        }
+    }
+    div:nth-child(4) {
+        div:first-child,div:last-child {
+            background: $backgound;
+        }
+        div:nth-child(2) {
+            @if $showInnerBorder {
+                border: 5px solid $borderColor;
+            } @else {
+                border-bottom: 5px solid $borderColor;
+                border-left: 5px solid $borderColor;
+            }
+        }
+        div:nth-child(3) {
+            @if $showInnerBorder {
+                border: 5px solid $borderColor;
+                border-left: none;
+                border-right: none;
+            } @else {
+                border-bottom: 5px solid $borderColor;
+            }
+        }
+        div:nth-child(4) {
+            @if $showInnerBorder {
+                border: 5px solid $borderColor;
+            } @else {
+            border-bottom: 5px solid $borderColor;
+            border-right: 5px solid $borderColor;
+            }
+        }
+    }
+}
+button {
+    // margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 5px solid $borderColor;
+}

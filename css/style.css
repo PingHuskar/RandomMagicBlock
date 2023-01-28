@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #333;
+  color: #aaa;
+  font-family: sans-serif;
+}
+
+h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-bottom: 10px;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 500px;
+  height: 500px;
+}
+.board div {
+  display: flex;
+  flex-flow: row;
+  width: 500px;
+  height: 100px;
+}
+.board div .blue {
+  width: 100px;
+  height: 100px;
+  background: blue;
+}
+.board div .red {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+.board div .yellow {
+  width: 100px;
+  height: 100px;
+  background: yellow;
+}
+.board div .green {
+  width: 100px;
+  height: 100px;
+  background: green;
+}
+.board div .orange {
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+.board div .white {
+  width: 100px;
+  height: 100px;
+  background: white;
+}
+.board div .blank {
+  width: 100px;
+  height: 100px;
+  background: #333;
+}
+.board div:first-child div, .board div:last-child div {
+  background: #333;
+}
+.board div:nth-child(2) div:first-child, .board div:nth-child(2) div:last-child {
+  background: #333;
+}
+.board div:nth-child(2) div:nth-child(2) {
+  border: 5px solid black;
+}
+.board div:nth-child(2) div:nth-child(3) {
+  border: 5px solid black;
+  border-left: none;
+  border-right: none;
+}
+.board div:nth-child(2) div:nth-child(4) {
+  border: 5px solid black;
+}
+.board div:nth-child(3) div:first-child, .board div:nth-child(3) div:last-child {
+  background: #333;
+}
+.board div:nth-child(3) div:nth-child(2) {
+  border: 5px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+.board div:nth-child(3) div:nth-child(4) {
+  border: 5px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+.board div:nth-child(4) div:first-child, .board div:nth-child(4) div:last-child {
+  background: #333;
+}
+.board div:nth-child(4) div:nth-child(2) {
+  border: 5px solid black;
+}
+.board div:nth-child(4) div:nth-child(3) {
+  border: 5px solid black;
+  border-left: none;
+  border-right: none;
+}
+.board div:nth-child(4) div:nth-child(4) {
+  border: 5px solid black;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 5px solid black;
+}/*# sourceMappingURL=style.css.map */
