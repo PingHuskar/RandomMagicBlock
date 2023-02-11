@@ -19,7 +19,6 @@ body {
 h1 {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   padding-bottom: 10px;
 }
@@ -124,4 +123,5 @@ button {
   font-weight: 700;
   border-radius: 10px;
   border: 5px solid black;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
