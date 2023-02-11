@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: outline-box;
 }
 
 body {
@@ -75,46 +75,25 @@ h1 {
 .board div:first-child div, .board div:last-child div {
   background: #333;
 }
-.board div:nth-child(2) div:first-child, .board div:nth-child(2) div:last-child {
+.board div:nth-child(2) div:first-child,
+.board div:nth-child(2) div:last-child,
+.board div:nth-child(3) div:first-child,
+.board div:nth-child(3) div:last-child,
+.board div:nth-child(4) div:first-child,
+.board div:nth-child(4) div:last-child {
   background: #333;
 }
-.board div:nth-child(2) div:nth-child(2) {
-  border: 5px solid black;
-}
-.board div:nth-child(2) div:nth-child(3) {
-  border: 5px solid black;
-  border-left: none;
-  border-right: none;
-}
-.board div:nth-child(2) div:nth-child(4) {
-  border: 5px solid black;
-}
-.board div:nth-child(3) div:first-child, .board div:nth-child(3) div:last-child {
-  background: #333;
-}
-.board div:nth-child(3) div:nth-child(2) {
-  border: 5px solid black;
-  border-top: none;
-  border-bottom: none;
-}
-.board div:nth-child(3) div:nth-child(4) {
-  border: 5px solid black;
-  border-top: none;
-  border-bottom: none;
-}
-.board div:nth-child(4) div:first-child, .board div:nth-child(4) div:last-child {
-  background: #333;
-}
-.board div:nth-child(4) div:nth-child(2) {
-  border: 5px solid black;
-}
-.board div:nth-child(4) div:nth-child(3) {
-  border: 5px solid black;
-  border-left: none;
-  border-right: none;
-}
+.board div:nth-child(2) div:nth-child(2),
+.board div:nth-child(2) div:nth-child(3),
+.board div:nth-child(2) div:nth-child(4),
+.board div:nth-child(3) div:nth-child(2),
+.board div:nth-child(3) div:nth-child(3),
+.board div:nth-child(3) div:nth-child(4),
+.board div:nth-child(4) div:nth-child(2),
+.board div:nth-child(4) div:nth-child(3),
 .board div:nth-child(4) div:nth-child(4) {
-  border: 5px solid black;
+  outline: 7px solid black;
+  z-index: 2;
 }
 
 button {
@@ -122,6 +101,6 @@ button {
   font-size: 1.2em;
   font-weight: 700;
   border-radius: 10px;
-  border: 5px solid black;
+  outline: 5px solid black;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
